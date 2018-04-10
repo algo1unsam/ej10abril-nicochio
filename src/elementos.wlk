@@ -20,6 +20,7 @@ object barba {
 	}
 }
 
+
 object mascaraDracula {
 	var tamanio = 2
 	
@@ -40,6 +41,15 @@ object mascaraFrankenstein {
 
 object mascaraPolitico {
 	
-	var promesasDeCampania
+	
+	var promesasDeCampana = [ ]
+	
+	method agregarPromesas(promesas){
+		promesasDeCampana.add(promesas)
 	}
+	
+	method nivelSusto(){
+		return promesasDeCampana.size()
+	}
+}
 

@@ -4,15 +4,20 @@ object macaria {
 	var nivelIra= 10
 	var disfraces = [ ]
 	var caramelos = 0
-	const bloqueNivelDeSustoDeDisfaces = { disfraz => disfraz.nivelSusto()} 
 	
+	
+	method agregarDisfraz(disfraz){
+		disfraces.add(disfraz)
+	}
+
 	method laHaceEnojar () {
 		
 		nivelIra = nivelIra + 10
 		
 	}
+	
 	method capacidadDeSusto(){
-		return nivelIra + disfraces.sum(bloqueNivelDeSustoDeDisfaces)
+		return nivelIra + disfraces.sum({ disfraz => disfraz.nivelSusto()} )
 	}
 
 }
@@ -36,6 +41,7 @@ object pancracio {
 		disfraz = nuevoDisfraz
 	}
 }
+
 
 // El chico inventado .
 
